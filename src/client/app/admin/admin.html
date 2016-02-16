@@ -1,0 +1,26 @@
+<h2>Admin</h2>
+
+<table>
+    <thead>
+        <tr>
+            <th>Email</th>
+            <th>Password</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr ng-repeat="user in AdminController.users">
+            <td>{{user.email}}</td>
+            <td>{{user.password}}</td>
+            <td>
+                <a ui-sref="user-detail({id: user._id})">View</a>
+            </td>
+        </tr>
+    </tbody>
+    <tfoot>
+        <tr>
+            <th align="left" colspan="2">Total</th>
+            <th align="right">{{AdminController.users.length}}</th>
+        </tr>
+    </tfoot>
+</table>

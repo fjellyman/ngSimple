@@ -1,0 +1,23 @@
+{
+  "name": "compadr-dotcom",
+  "description": "",
+  "main": "/src/server/index.js",
+  "authors": [
+    "Jordan Fjellman <jordan.fjellman@gmail.com>"
+  ],
+  "license": "ISC",
+  "moduleType": [],
+  "homepage": "",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "^1.5.0",
+    "angular-ui-router": "ui-router#^0.2.18"
+  }
+}

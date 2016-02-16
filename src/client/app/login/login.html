@@ -1,0 +1,8 @@
+<h2>Login</h2>
+
+<form name="loginForm" novalidate ng-submit="LoginController.submit()">
+    <input name="email" placeholder="Email" required type="text" ng-model="LoginController.user.email"/>
+    <span ng-show="loginForm.email.$error.required">Required</span>
+    <input placeholder="Password" type="password" ng-model="LoginController.user.password" />
+    <button type="submit">Login</button>
+</form>

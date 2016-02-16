@@ -1,0 +1,8 @@
+<h2>Register</h2>
+
+<form name="registerForm" novalidate ng-submit="RegisterController.submit()">
+    <input placeholder="Email" type="text"  ng-model="RegisterController.newUser.email" />
+    <input placeholder="Password" type="password"  ng-model="RegisterController.newUser.password" />
+    <input placeholder="Confirm Password" type="password"  />
+    <button type="submit">Register</button>
+</form>
