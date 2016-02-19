@@ -40,6 +40,10 @@
                 controllerAs: 'LoginController',
                 templateUrl: '/app/login/login.html'
             })
+            .state('logout', {
+                url: '/logout',
+                controller: 'LogoutController',
+            })
             .state('register', {
                 url: '/register',
                 controller: 'RegisterController',

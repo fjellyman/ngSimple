@@ -10,6 +10,7 @@
             'app.admin',
             'app.home',
             'app.login',
+            'app.logout',
             'app.register',
             'app.user'
         ]);

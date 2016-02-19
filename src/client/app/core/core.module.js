@@ -6,8 +6,10 @@
            /* angular */
            
            /* third party */
-           'ui.router'
+           'ui.router',
            
            /* external */ 
+           'plugins.header',
+           'plugins.token'
         ]);
 })();
