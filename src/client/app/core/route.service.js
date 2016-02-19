@@ -5,9 +5,9 @@
         .module('app.core')
         .config(router);
 
-    router.$inject = ['$locationProvider', '$stateProvider', '$urlRouterProvider'];
+    router.$inject = ['$httpProvider', '$locationProvider', '$stateProvider', '$urlRouterProvider'];
 
-    function router($locationProvider, $stateProvider, $urlRouterProvider) {
+    function router($httpProvider, $locationProvider, $stateProvider, $urlRouterProvider) {
 
         $urlRouterProvider.otherwise("/");
 
@@ -15,6 +15,8 @@
             enabled: true
             //requireBase: false
         });
+        
+        $httpProvider.interceptors.push('interceptorService');
 
         $stateProvider
             .state('home', {

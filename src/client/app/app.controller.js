@@ -5,22 +5,28 @@
         .module('app')
         .controller('AppController', AppController);
 
-    AppController.$inject = ['$scope'];
+    AppController.$inject = ['$rootScope'];
 
-    function AppController($scope) {
+    function AppController($rootScope) {
         var vm = this;
         
         vm.loading = false;
         
-        $scope.$on('$stateChangeStart', function (event, toState) {
+        $rootScope.$on('$stateChangeStart', function (event, toState) {
             if (toState.resolve) {
                 vm.loading = true;
             }
         });
-        $scope.$on('$stateChangeSuccess', function (event, toState) {
+        
+        $rootScope.$on('$stateChangeSuccess', function (event, toState) {
             if (toState.resolve) {
                 vm.loading = false;
             }
+        });
+        
+        $rootScope.$on('$stateChangeError', function (event, toState) {
+            console.log('error in call');
+            vm.loading = false;
         });
     }
 })();
