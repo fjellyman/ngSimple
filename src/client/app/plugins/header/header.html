@@ -9,7 +9,7 @@
         <li ng-hide="HeaderController.isAuthenticated()">
             <a ui-sref="register">Register</a>
         </li>
-        <li>
+        <li ng-hide="HeaderController.isAuthenticated()">
             <a ui-sref="login">Login</a>
         </li>
         <li ng-show="HeaderController.isAuthenticated()">

@@ -9,8 +9,9 @@
     <simple-header></simple-header>
     
     <div ng-controller="AppController as AppController">
-        <span ng-if="AppController.loading">loading...</span>
-        <div ui-view ng-hide="AppController.loading"></div>
+        <!--<span ng-if="AppController.loading">loading...</span>
+        <div ui-view ng-hide="AppController.loading"></div>-->
+        <div ui-view></div>
     </div>
     
     <script src="/bower_components/angular/angular.min.js"></script>
@@ -35,6 +36,7 @@
     <script src="/app/register/register.module.js"></script>
     <script src="/app/user/user.module.js"></script>
     
+    <script src="/app/core/constant.service.js"></script>
     <script src="/app/core/data.service.js"></script>
     <script src="/app/core/route.service.js"></script>
     

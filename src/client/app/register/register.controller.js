@@ -5,17 +5,16 @@
         .module('app.register')
         .controller('RegisterController', RegisterController);
         
-    RegisterController.$inject = ['$http', '$log', '$q', '$state', 'tokenService'];        
+    RegisterController.$inject = ['$http', '$log', '$q', '$state', 'tokenService', 'USER_URL'];        
         
-    function RegisterController($http, $log, $q, $state, tokenService) {
+    function RegisterController($http, $log, $q, $state, tokenService, USER_URL) {
         var vm = this;
         
         vm.newUser = {};
         
         vm.submit = function () {
-            $http.post('http://localhost:3010/user', vm.newUser)
+            $http.post(USER_URL + 'user', vm.newUser)
                 .then(function (res) {
-                    $log.info(res);
                     tokenService.setToken(res.data.data.token);
                     $state.go('home');
                 })

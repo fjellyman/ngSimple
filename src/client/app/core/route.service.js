@@ -32,7 +32,7 @@
                 templateUrl: '/app/admin/admin.html',
                 resolve: {
                     users: function (dataservice) {
-                        return dataservice.getUsers();
+                       return dataservice.getUsers();
                     }
                 }
             })
