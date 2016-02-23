@@ -10,6 +10,21 @@
     },
     "angularjs/angular.d.ts": {
       "commit": "85af69c91599a6c904618545f0613970e1ff3f64"
+    },
+    "gulp/gulp.d.ts": {
+      "commit": "bd269cad4cb2b495f940c7b6afc5825d568029be"
+    },
+    "node/node.d.ts": {
+      "commit": "bd269cad4cb2b495f940c7b6afc5825d568029be"
+    },
+    "orchestrator/orchestrator.d.ts": {
+      "commit": "bd269cad4cb2b495f940c7b6afc5825d568029be"
+    },
+    "q/Q.d.ts": {
+      "commit": "bd269cad4cb2b495f940c7b6afc5825d568029be"
+    },
+    "gulp-task-listing/gulp-task-listing.d.ts": {
+      "commit": "bd269cad4cb2b495f940c7b6afc5825d568029be"
     }
   }
 }
