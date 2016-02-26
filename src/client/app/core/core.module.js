@@ -9,6 +9,7 @@
            'ui.router',
            
            /* external */ 
+           'material.navigationDrawer',
            'plugins.header',
            'plugins.token'
         ]);

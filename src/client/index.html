@@ -2,29 +2,56 @@
 
 <head>
     <base href="/">
+
+    <link href="/lib/normalize-css/normalize.css" rel="stylesheet" type="text/css" />
+
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet" type="text/css" />
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans" rel="stylesheet" type="text/css" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+
+    <link href="/app/plugins/mdNavigationDrawer/mdNavigationDrawer.css" rel="stylesheet" type="text/css" />
 </head>
 
 <body ng-app="app">
-    
+
+    <md-navigation-drawer>
+        <md-navigation-drawer-group>
+            <md-navigation-drawer-item md-icon="home" md-title="Home" md-ui-sref=""></md-navigation-drawer-item>
+        </md-navigation-drawer-group>
+        <hr/>
+        <md-navigation-drawer-group md-subtitle="Mail">
+            <md-navigation-drawer-item md-icon="send" md-title="Sent mail" md-active="true" md-ui-sref=""></md-navigation-drawer-item>
+            <md-navigation-drawer-item md-icon="star" md-title="Starred" md-ui-sref=""></md-navigation-drawer-item>
+            <md-navigation-drawer-item md-icon="drafts" md-title="Drafts" md-ui-sref=""></md-navigation-drawer-item>
+        </md-navigation-drawer-group>
+        <hr/>
+        <md-navigation-drawer-group>
+            <md-navigation-drawer-item md-icon="settings" md-title="Settings" md-ui-sref=""></md-navigation-drawer-item>
+            <md-navigation-drawer-item md-icon="feedback" md-title="Send Feedback" md-ui-sref=""></md-navigation-drawer-item>
+        </md-navigation-drawer-group>
+    </md-navigation-drawer>
+
     <simple-header></simple-header>
-    
+
     <div ng-controller="AppController as AppController">
         <!--<span ng-if="AppController.loading">loading...</span>
         <div ui-view ng-hide="AppController.loading"></div>-->
         <div ui-view></div>
     </div>
-    
-    <script src="/bower_components/angular/angular.min.js"></script>
-    <script src="/bower_components/angular-ui-router/release/angular-ui-router.min.js"></script>
+
+    <script src="/lib/angular/angular.min.js"></script>
+    <script src="/lib/angular-ui-router/release/angular-ui-router.min.js"></script>
+    <script src="/lib/jquery/dist/jquery.min.js"></script>
+    <script src="/lib/lodash/dist/lodash.min.js"></script>
 
     <script src="/app/plugins/token/token.module.js"></script>
     <script src="/app/plugins/header/header.module.js"></script>
-    
+
     <script src="/app/plugins/token/token.service.js"></script>
     <script src="/app/plugins/token/interceptor.service.js"></script>
-    
+
     <script src="/app/plugins/header/header.controller.js"></script>
-    
+
     <script src="/app/plugins/header/header.directive.js"></script>
 
     <script src="/app/app.module.js"></script>
@@ -35,13 +62,18 @@
     <script src="/app/logout/logout.module.js"></script>
     <script src="/app/register/register.module.js"></script>
     <script src="/app/user/user.module.js"></script>
-    
+    <script src="/app/plugins/mdNavigationDrawer/mdNavigationDrawer.module.js"></script>
+
+    <script src="/app/plugins/mdNavigationDrawer/mdNavigationDrawer.directive.js"></script>
+    <script src="/app/plugins/mdNavigationDrawer/group/mdNavigationDrawerGroup.directive.js"></script>
+    <script src="/app/plugins/mdNavigationDrawer/item/mdNavigationDrawerItem.directive.js"></script>
+
     <script src="/app/core/constant.service.js"></script>
     <script src="/app/core/data.service.js"></script>
     <script src="/app/core/route.service.js"></script>
-    
+
     <script src="/app/user/user.data.service.js"></script>
-    
+
     <script src="/app/app.controller.js"></script>
     <script src="/app/admin/admin.controller.js"></script>
     <script src="/app/home/home.controller.js"></script>

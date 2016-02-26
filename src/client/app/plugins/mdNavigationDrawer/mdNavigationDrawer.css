@@ -1,0 +1,106 @@
+div.navigation-drawer {
+  background-color: #ffffff;
+  box-shadow: 0px 2px 10px 0px rgba(0, 0, 0, .16), 0px 2px 5px 0px rgba(0, 0, 0, .26);
+  display: block;
+  height: 100%;
+  font-family: "Roboto", "Noto Sans", sans-serif;
+  left: -320px;
+  outline: 0 none transparent;
+  overflow: hidden;
+  overflow-y: auto;
+  position: absolute;
+  transition: all 0.3s ease;
+  width: 320px;
+  z-index: 100;
+}
+
+div.navigation-drawer.active {
+  box-shadow: 0 6px 20px 0 rgba(0, 0, 0, .19), 0 8px 17px 0 rgba(0, 0, 0, .2);
+  left: 0;
+  outline: 9999px solid rgba(0, 0, 0, 0.2);
+}
+
+div.navigation-drawer > .account-information {
+  background: #005195;
+  color: #ffffff;
+  font-size: 14px;
+  height: 56px;
+  padding: 50px 16px 0 16px;
+}
+
+div.navigation-drawer > .account-information > primary {
+  font-weight: 500;
+}
+
+div.navigation-drawer > .account-information > secondary {
+  font-weight: 400;
+}
+
+div.navigation-drawer > .title {
+  height: 56px;
+  padding: 0 16px;
+}
+
+@media (max-width: 786px) {
+  div.navigation-drawer > .title {
+    display: none;
+  }   
+}
+@media (min-width: 787px) {
+  div.navigation-drawer > .account-information {
+    display: none;
+  } 
+}
+
+ul.navigation-drawer-group {
+  margin: 0;
+  padding: 8px 0;
+  list-style-type: none;
+}
+
+ul.navigation-drawer-group > .subtitle {
+    color: rgba(0, 0, 0, .54);
+    display: block;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 16px;
+    padding: 8px 16px 16px;
+}
+
+ul.navigation-drawer-group hr {
+  background: rgba(0, 0, 0, .12);
+  border: 0;
+  height: 1px;
+  margin: 0;
+  padding: 0px;
+}
+
+li.navigation-drawer-item {
+  padding: 0 16px;
+  height: 48px;
+}
+
+li.navigation-drawer-item > a {
+  color: rgba(0, 0, 0, .87);
+  display: block;
+  font-weight: 500;
+  height: 100%;
+  line-height: 48px;
+  margin: 0;
+  width: 100%;
+}
+
+li.navigation-drawer-item > a > .icon {
+  color: rgba(0, 0, 0, .54);
+  position: relative;
+  top: 6px;
+}
+
+li.navigation-drawer-item.active > a, li.navigation-drawer-item.active > a > .icon {
+    color: #005195;;
+}
+
+li.navigation-drawer-item > a > .title {
+  left: 72px;
+  position: absolute;
+}

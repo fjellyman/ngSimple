@@ -15,7 +15,7 @@ app.get('/ping', function (req, res, done) {
     res.send('pong');
 });
 
-app.use('/bower_components', express.static('./bower_components'));
+app.use('/lib', express.static('./src/client/lib'));
 app.use('/app', express.static('./src/client/app'));
 app.use('/*', express.static('./src/client'));
 
